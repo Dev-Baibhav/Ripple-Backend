@@ -30,7 +30,7 @@ const signup = async (req, res) => {
             },
             process.env.JWT_SECRET,
             {
-                expiresIn: "60s"
+                expiresIn: "360h"
             }
         )
 
@@ -74,7 +74,7 @@ const signin = async (req, res) => {
                 },
                 process.env.JWT_SECRET,
                 {
-                    expiresIn: "60s"
+                    expiresIn: "360h"
                 }
             )
             res.status(401).json({

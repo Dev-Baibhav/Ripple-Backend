@@ -5,7 +5,7 @@ const { client } = ConnectRedis;
 const setOtp = async (otp, email) => {
     await client.set(
         email, otp,  {
-            EX: 60
+            EX: 300
         }
     )
 }
